@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ice break</title>
+    <style>
+        body {
+            background-color: #f1f1f1;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .icebreak {
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>アイスブレイクしましょう！</h1>
+    <button onclick="generateIceBreak()">Let's break</button>
+    <div class="container">
+        <div class="icebreak" id="icebreak1"></div>
+        <div class="icebreak" id="icebreak2"></div>
+        <div class="icebreak" id="icebreak3"></div>
+    </div>
+
+    <script>
+        function generateIceBreak() {
+            var iceBreaks = [
+                "お気に入りの映画は何ですか？",
+                "最後に読んだ本は何ですか？",
+                "好きな食べ物は何ですか？",
+                "最後に行った旅行先はどこですか？",
+                "趣味は何ですか？",
+                "好きな音楽ジャンルは何ですか？",
+                "休日は何をして過ごしますか？",
+                "自分の特技は何だと思いますか？",
+                "好きなスポーツは何ですか？",
+                "週末に何をして過ごすのが好きですか？",
+                "最近ハマっているテレビ番組はありますか？",
+                "最後に行ったコンサートはどのバンド/アーティストでしたか？",
+                "自分の夢や目標はありますか？",
+                "人生で一番印象に残っているイベントは何ですか？",
+                "最後に行ったスポーツイベントはどれでしたか？",
+                "最後にボランティア活動をしたのはいつですか？",
+                "好きなアートや芸術家はありますか？",
+                "最後に行った美術館や博物館はどこでしたか？",
+                "将来的に行ってみたい旅行先はありますか？",
+                "最後に行った映画館で観た映画は何でしたか？",
+                "好きな季節は何ですか？",
+                "最後に行ったアウトドア活動は何でしたか？",
+                "好きな動物は何ですか？",
+                "あなたの人生でのモットーは何ですか？",
+                "好きなテーマパークはどこですか？",
+                "最近観たおすすめの映画はありますか？",
+                "好きなマンガやアニメは何ですか？",
+                "最後に行ったイベントは何でしたか？",
+                "好きな外国の料理は何ですか？",
+                "最後に行ったコンサートやライブはどんな感じでしたか？",
+                "最近ハマっているゲームはありますか？",
+                "あなたの通勤中のストレス解消法は？",
+                "最近購入したものの中でお気に入りのアイテムは何ですか？",
+                "好きな音楽のアーティストやバンドは何ですか？",
+                "あなたの趣味の中で特におすすめしたいものはありますか？",
+                "最後に行ったスポーツ観戦はどの競技でしたか？",
+                "あなたの得意なスポーツは何ですか？",
+                "最後に行った博物館でした展示は何でしたか？",
+                "最近観た感動的な映画は何ですか？",
+                "好きなお笑い芸人やコメディアンはいますか？",
+                "最後に行った旅行でした思い出深いエピソードは何ですか？",
+                "あなたの好きなアーティストやデザイナーは誰ですか？",
+                "最後に行った音楽フェスはどのイベントでしたか？",
+                "好きな映画ジャンルは何ですか？",
+                "最近行ったレストランで美味しかった料理は何でしたか？",
+                "いつか挑戦したいと思っているアクティビティは何ですか？",
+                "最後に行ったテーマパークのおすすめのアトラクションは何ですか？",
+                "あなたの好きな言葉や格言は何ですか？",
+                "最近ハマっているスポーツやアクティビティは何ですか？",
+                "あなたの人生での一番の成功体験は何ですか？",
+                "あなたのお気に入りのバラエティ番組は何ですか？",
+                "好きなクイズのジャンルは何ですか？",
+                "あなたの人生での座右の銘は何ですか？",
+                "最近観た感動的なテレビ番組は何ですか？",
+                "最近ハマっているゲームやパズルは何ですか？",
+                "あなたの通勤や移動手段は何ですか？",
+                "最近購入したもので一番使い勝手の良いアイテムは何ですか？",
+                "最後に行った旅行での楽しいエピソードを教えてください。",
+                "あなたの尊敬する人や憧れの人物は誰ですか？",
+                "好きな映画の監督は誰ですか？",
+                "あなたの夢中になっている趣味は何ですか？",
+                "最近読んだ雑誌や新聞でおすすめの記事はありますか？",
+                "あなたの好きな休日の過ごし方は何ですか？",
+                "最近ハマっているYouTubeチャンネルや動画はありますか？",
+                "あなたのお気に入りの料理のレシピを教えてください。",
+                "あなたの好きな季節のアクティビティは何ですか？",
+                "最近購入した家具やインテリアのお気に入りは何ですか？",
+                "好きな音楽ジャンルの中で特におすすめのアーティストは誰ですか？",
+                "好きな果物は？",
+                "最近読んだ本で心に残った名言は何ですか？",
+                "最近観た感動的な映画は何ですか？",
+                "最近驚いた瞬間、出来事は何ですか？",
+                "この１週間でハッピーだったことは？",
+                "好きな回転ずしのメニューは？",
+                "実はこれはちょっと、、食べれませんというメニューは？",
+                "好きなコンビニは？",
+                "よく買うコンビニの商品は？"
+            ];
+
+            var randomIceBreaks = [];
+            while (randomIceBreaks.length < 3) {
+                var randomIndex = Math.floor(Math.random() * iceBreaks.length);
+                var randomIceBreak = iceBreaks[randomIndex];
+                if (!randomIceBreaks.includes(randomIceBreak)) {
+                    randomIceBreaks.push(randomIceBreak);
+                }
+            }
+
+            document.getElementById("icebreak1").innerText = randomIceBreaks[0];
+            document.getElementById("icebreak2").innerText = randomIceBreaks[1];
+            document.getElementById("icebreak3").innerText = randomIceBreaks[2];
+        }
+    </script>
+</body>
+
+</html>
