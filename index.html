@@ -60,6 +60,9 @@
         <div class="icebreak" id="icebreak1"></div>
         <div class="icebreak" id="icebreak2"></div>
         <div class="icebreak" id="icebreak3"></div>
+        <div class="icebreak" id="icebreak4"></div>
+        <div class="icebreak" id="icebreak5"></div>
+        <div class="icebreak" id="icebreak6"></div>
     </div>
 
     <script>
@@ -128,7 +131,7 @@
                 "あなたの夢中になっている趣味は何ですか？",
                 "最近読んだ雑誌や新聞でおすすめの記事はありますか？",
                 "あなたの好きな休日の過ごし方は何ですか？",
-                "最近ハマっているYouTubeチャンネルや動画はありますか？",
+                "最近よく見るYouTubeチャンネルや動画はありますか？",
                 "あなたのお気に入りの料理のレシピを教えてください。",
                 "あなたの好きな季節のアクティビティは何ですか？",
                 "最近購入した家具やインテリアのお気に入りは何ですか？",
@@ -141,11 +144,14 @@
                 "好きな回転ずしのメニューは？",
                 "実はこれはちょっと、、食べれませんというメニューは？",
                 "好きなコンビニは？",
-                "よく買うコンビニの商品は？"
+                "よく買うコンビニの商品は？",
+                "次に行きたい旅先は？",
+                "最近食べた、旬なものは？",
+                "最近「買ってよかった」と感じたものは？",
             ];
 
             var randomIceBreaks = [];
-            while (randomIceBreaks.length < 3) {
+            while (randomIceBreaks.length < 6) {
                 var randomIndex = Math.floor(Math.random() * iceBreaks.length);
                 var randomIceBreak = iceBreaks[randomIndex];
                 if (!randomIceBreaks.includes(randomIceBreak)) {
@@ -156,6 +162,9 @@
             document.getElementById("icebreak1").innerText = randomIceBreaks[0];
             document.getElementById("icebreak2").innerText = randomIceBreaks[1];
             document.getElementById("icebreak3").innerText = randomIceBreaks[2];
+            document.getElementById("icebreak4").innerText = randomIceBreaks[3];
+            document.getElementById("icebreak5").innerText = randomIceBreaks[4];
+            document.getElementById("icebreak6").innerText = randomIceBreaks[5];
         }
     </script>
 </body>
